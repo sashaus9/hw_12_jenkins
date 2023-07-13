@@ -29,8 +29,9 @@ public class FillFormRemoteTests extends RemoteBaseTest {
     @Tag("remote")
     @DisplayName("Fill form test")
     void fillFormTest() {
+        step("Open form page", () ->
         automationPracticeFormPage.openPage()
-                .removeBannerAndFooter();
+                .removeBannerAndFooter());
 
         step("Fill form", () ->
                 automationPracticeFormPage.setFirstName(TestDataGenerator.firstName)

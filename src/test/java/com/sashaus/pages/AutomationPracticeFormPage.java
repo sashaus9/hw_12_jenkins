@@ -3,7 +3,6 @@ package com.sashaus.pages;
 import com.codeborne.selenide.SelenideElement;
 import com.sashaus.pages.blocks.CalendarBlock;
 import com.sashaus.pages.blocks.RegistrationResultsModalWindow;
-import io.qameta.allure.Step;
 
 import java.util.Map;
 
@@ -29,14 +28,12 @@ public class AutomationPracticeFormPage {
             currentAddressInput = $("#currentAddress"),
             submitButton = $("#submit");
 
-    @Step("Open form page")
     public AutomationPracticeFormPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         return this;
     }
 
-    @Step("Remove banner and footer")
     public AutomationPracticeFormPage removeBannerAndFooter() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
