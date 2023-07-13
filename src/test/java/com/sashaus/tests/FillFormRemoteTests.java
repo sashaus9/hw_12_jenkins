@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FillFormRemoteTests extends BaseTest {
+public class FillFormRemoteTests extends RemoteBaseTest {
 
     private final Map<String, String> resultValues = new HashMap<>() {{
         put("Student Name", TestDataGenerator.firstName + " " + TestDataGenerator.lastName);
