@@ -1,12 +1,13 @@
 package com.sashaus.tests;
 
 import com.sashaus.utils.TestDataGenerator;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class FillFormTests extends BaseTest {
+public class FillFormRemoteTests extends BaseTest {
 
     private final Map<String, String> resultValues = new HashMap<>() {{
         put("Student Name", TestDataGenerator.firstName + " " + TestDataGenerator.lastName);
@@ -22,6 +23,7 @@ public class FillFormTests extends BaseTest {
     }};
 
     @Test
+    @Tag("remote")
     void fillFormTest() {
         automationPracticeFormPage.openPage()
                 .removeBannerAndFooter()
